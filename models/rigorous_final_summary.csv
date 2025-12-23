@@ -1,0 +1,12 @@
+"Metric","Value"
+"CV Balanced Accuracy",0.9558
+"CV ROC-AUC",0.9828
+"CV Sensitivity",0.9377
+"CV Specificity",0.9758
+"Holdout ROC-AUC",0.9957
+"Holdout Sensitivity (optimal thresh)",0.9412
+"Holdout Specificity (optimal thresh)",0.9545
+"Holdout PPV (optimal thresh)",0.6667
+"Holdout NPV (optimal thresh)",0.9941
+"Holdout Brier Score",0.0255
+"Optimal Threshold",0.5084
