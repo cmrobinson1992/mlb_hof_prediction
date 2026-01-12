@@ -1,7 +1,7 @@
 # Baseball Hall of Fame Prediction Model
-→ [Try the Interactive Dashboard] (https://christian-robinson.shinyapps.io/mlb_hof_predictor/)
+→ [Try the Interactive Dashboard](https://christian-robinson.shinyapps.io/mlb_hof_predictor/)
 
-→ [View the Code] (https://github.com/cmrobinson1992/mlb_hof_prediction/tree/main/src)
+→ [View the Code](https://github.com/cmrobinson1992/mlb_hof_prediction/tree/main/src)
 
 # What This Project Does
 This project predicts a position player's probability of induction into the Baseball Hall of Fame by comparing their production against historical players at the same age.
