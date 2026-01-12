@@ -49,7 +49,15 @@ PED flags- suspensions and Mitchell Report mentions
 
 **2. Feature Engineering**
 The features are designed to capture production relative to opportunity:
-CategoryFeaturesWhy It MattersRate Statshr_per_ab, rbi_per_ab, bb_per_ab, ebh_rateEfficiency independent of playing timePer-Year Statshr_per_year, hits_per_year, awards_per_yearProduction densityPosition Adjustmentspos_difficulty, pos_adj_opsFair comparison across positionsEra Adjustmentsera_adj_hr, era_adj_ops, neutralized_HFair comparison across erasRecognitionaward_shareAwards won / awards available through that ageComposite Scoresoffensive_value, career_achievement, efficiency_scoreMulti-dimensional summaries
+|Category|Features|Why It Matters|
+--- | --- | ---
+|Rate Stats|hr_per_ab, rbi_per_ab, bb_per_ab, ebh_rate|Efficiency independent of playing time|
+|Per-Year Stats|hr_per_year, hits_per_year, awards_per_year|Production density|
+|Position Adjustments|pos_difficulty, pos_adj_ops|Fair comparison across positions|
+|Era Adjustments|era_adj_hr, era_adj_ops, neutralized_H|Fair comparison across eras|
+|Recognition|award_share|Awards won / awards available through that age|
+|Composite Scores|offensive_value, career_achievement, efficiency_score|Multi-dimensional summaries|
+
 award_share is particularly important—it measures recognition relative to opportunity. A player who won 3 MVP awards in 8 seasons has a higher award share than one who won 3 in 15 seasons.
 
 **3. Model Training**
@@ -59,9 +67,10 @@ Optimized for Balanced Accuracy
 Threshold optimization using Youden's J
 
 Elastic net (glmnet) won over GBM, XGBoost, SVM, and Random Forest—interpretable, robust, and handles correlated features gracefully.
-AgeCV Balanced AccCV ROC-AUC250.8820.935280.9250.970300.9340.977330.9380.980350.9440.982400.9590.984
+
 Earlier ages have lower accuracy because there's more uncertainty—careers can diverge significantly after age 25. By age 35, the signal is much clearer.
-4. Prediction
+
+**4. Prediction**
 For a current player:
 
 Get their cumulative stats through their current age
@@ -94,11 +103,13 @@ Large-market teams show higher raw HOF rates. But after controlling for player s
 # The Dashboard
 The interactive Shiny app lets you:
 
-Select any current or historical player
+Select any active player (as of 2024)
+Select a team, then an active player on that team (2024 rosters)
+Select a position, then an active player at that position (as of 2024)
+
 View their HOF probability at each age snapshot
 See how their trajectory compares to historical HOFers
-Explore 2026 ballot candidates and their probabilities
-
+Explore 2026 ballot candidates and their candidacy
 
 # Data Sources
 
